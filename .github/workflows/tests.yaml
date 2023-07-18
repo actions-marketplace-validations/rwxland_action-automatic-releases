@@ -30,4 +30,4 @@ jobs:
       - name: 'Check lint'
         run: 'npm run lint'
       - name: 'Testing'
-        run: 'npm test'
+        run: 'npx jest --env=node --colors --forceExit'
