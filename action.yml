@@ -1,5 +1,5 @@
-name: 'Github Automatic Releases'
-author: 'ramonrwx'
+name: 'GH Automatic Releases'
+author: 'marvinpinto'
 description: 'Automate the GitHub release process with assets, changelogs, pre-releases, and more'
 inputs:
   repo_token:
@@ -32,4 +32,4 @@ runs:
   main: 'dist/index.js'
 branding:
   icon: 'git-merge'
-  color: 'red'
+  color: 'green'
