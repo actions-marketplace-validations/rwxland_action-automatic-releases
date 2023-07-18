@@ -1,0 +1,20 @@
+---
+name: 'pre-release'
+
+on:
+  push:
+    branches:
+      - 'master'
+    tags-ignore:
+      - '*'
+
+jobs:
+  gh_pre_release:
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Github Automatic Releases
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          automatic_release_tag: 'latest'
+          prerelease: true
