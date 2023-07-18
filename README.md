@@ -15,9 +15,9 @@ This action simplifies the GitHub release process by automatically uploading ass
 
 ## Usage Examples
 
-### Automatically generate a pre-release when changes land on master
+### Automatically generate a pre-release when changes land on main
 
-This example workflow will kick in as soon as changes land on `master`. After running the steps to build and test your project:
+This example workflow will kick in as soon as changes land on `main`. After running the steps to build and test your project:
 
 1. It will create (or replace) a git tag called `latest`.
 1. Generate a changelog from all the commits between this, and the previous `latest` tag.
@@ -35,7 +35,7 @@ name: 'pre-release'
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   pre-release:
@@ -48,7 +48,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: 'ramomrwx/gh-automatic-releases@latest'
+      - uses: 'ramomrwx/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: 'latest'
@@ -87,7 +87,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: 'ramonrwx/gh-automatic-releases@latest'
+      - uses: 'ramonrwx/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: false
@@ -127,15 +127,15 @@ The GitHub Actions framework allows you to trigger this (and other) actions on _
 
 ## Versioning
 
-Every commit that lands on master for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](../../releases/latest) for the available versions.
+Every commit that lands on main for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](../../releases/latest) for the available versions.
 
 ```yaml
-- uses: 'ramonrwx/gh-automatic-releases@<VERSION>'
+- uses: 'ramonrwx/action-automatic-releases@<VERSION>'
 ```
 
 ## How to get help
 
-The main [README](https://github.com/ramonrwx/gh-automatic-releases/blob/main/README.md) for this project has a bunch of information related to debugging & submitting issues.
+The main [README](/README.md) for this project has a bunch of information related to debugging & submitting issues.
 
 ## License
 
