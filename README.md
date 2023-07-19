@@ -26,7 +26,7 @@ This example workflow will kick in as soon as changes land on `main`. After runn
 1. Upload `LICENSE.txt` and any `jar` files as release assets.
 1. Mark this release as a `pre-release`.
 
-You can see a working example of this workflow over at [ramonrwx/gh-automatic-releases](https://github.com/ramonrwx/gh-automatic-releases/releases/tag/latest).
+You can see a working example of this workflow over at [ramonrwx/action-automatic-releases](https://github.com/ramonrwx/action-automatic-releases/releases/tag/latest).
 
 ```yaml
 ---
