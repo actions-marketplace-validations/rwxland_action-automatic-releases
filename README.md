@@ -26,7 +26,7 @@ This example workflow will kick in as soon as changes land on `main`. After runn
 1. Upload `LICENSE.txt` and any `jar` files as release assets.
 1. Mark this release as a `pre-release`.
 
-You can see a working example of this workflow over at [ramonrwx/action-automatic-releases](https://github.com/ramonrwx/action-automatic-releases/releases/tag/latest).
+You can see a working example of this workflow over at [rwxland/action-automatic-releases](https://github.com/rwxland/action-automatic-releases/releases/tag/latest).
 
 ```yaml
 ---
@@ -87,7 +87,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: 'ramonrwx/action-automatic-releases@latest'
+      - uses: 'rwxland/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: false
@@ -130,7 +130,7 @@ The GitHub Actions framework allows you to trigger this (and other) actions on _
 Every commit that lands on main for this project triggers an automatic build as well as a tagged release called `latest`. If you don't wish to live on the bleeding edge you may use a stable release instead. See [releases](../../releases/latest) for the available versions.
 
 ```yaml
-- uses: 'ramonrwx/action-automatic-releases@<VERSION>'
+- uses: 'rwxland/action-automatic-releases@<VERSION>'
 ```
 
 ## How to get help
