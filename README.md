@@ -48,7 +48,7 @@ jobs:
         run: |
           echo "done!"
 
-      - uses: 'ramomrwx/action-automatic-releases@latest'
+      - uses: 'rwxland/action-automatic-releases@latest'
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           automatic_release_tag: 'latest'
