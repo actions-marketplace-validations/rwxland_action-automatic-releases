@@ -11,7 +11,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: Github Automatic Releases
-        uses: ramonrwx/action-automatic-releases@latest
+        uses: .
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: false
